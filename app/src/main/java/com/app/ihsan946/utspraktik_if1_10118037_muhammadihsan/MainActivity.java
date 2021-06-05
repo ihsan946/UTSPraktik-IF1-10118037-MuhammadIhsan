@@ -1,5 +1,10 @@
 package com.app.ihsan946.utspraktik_if1_10118037_muhammadihsan;
 
+//NIM : 10118037
+//NAMA : MUHAMMAD IHSAN
+//KELAS : IF-1 2018
+//Tanggal Pembuatan : 5 Juni 2021
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
