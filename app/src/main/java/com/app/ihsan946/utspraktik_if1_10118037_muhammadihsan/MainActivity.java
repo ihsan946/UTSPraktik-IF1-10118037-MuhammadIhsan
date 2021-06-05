@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private String jk;
+    private String hubungan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         //
 
         //
-        RadioGroup jenisKelamin,;
-
+        RadioGroup jenisKelamin,hubunganAnda;
         jenisKelamin = findViewById(R.id.jenis_kelamin);
+        hubunganAnda = findViewById(R.id.hubungan_anda);
 
         jenisKelamin.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -61,12 +62,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
+        hubunganAnda.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.item1:
+                        hubungan = "OrangTua";
+                        break;
+                    case R.id.item2:
+                        hubungan = "Suami/Istri";
+                        break;
+                    case R.id.item3:
+                        hubungan = "Anak";
+                        break;
+                    case R.id.item4:
+                        hubungan = "Kerabat Lainnya";
+                        break;
+                }
+            }
+        });
 
         //
+
         selanjutnya = findViewById(R.id.button_selanjutnya);
         selanjutnya.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,12 +106,11 @@ public class MainActivity extends AppCompatActivity {
         ttl = findViewById(R.id.edittext3);
         TTl = ttl.getText().toString();
 
-
-
         intent.putExtra("nik", NIK);
         intent.putExtra("nama", Nama);
         intent.putExtra("ttl", TTl);
         intent.putExtra("jk", jk);
+        intent.putExtra("hubungan",hubungan);
         startActivity(intent);
 
     }

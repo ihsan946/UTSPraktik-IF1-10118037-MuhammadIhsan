@@ -20,18 +20,21 @@ public class MainActivity2 extends AppCompatActivity {
         String Nama = intent.getStringExtra("nama");
         String TTl = intent.getStringExtra("ttl");
         String jenisKelamin = intent.getStringExtra("jk");
+        String hubungan = intent.getStringExtra("hubungan");
 
-
-        TextView nik,nama,TanggalLahir,jk;
+        TextView nik,nama,TanggalLahir,jk,hubungan1;
         nik = findViewById(R.id.textview_nik);
         nama = findViewById(R.id.textview_nama);
         TanggalLahir = findViewById(R.id.textview_ttl);
         jk = findViewById(R.id.textview_jeniskelamin);
+        hubungan1 = findViewById(R.id.textview_hubungananda);
+
 
         nik.setText(NIK);
         nama.setText(Nama);
         TanggalLahir.setText(TTl);
         jk.setText(jenisKelamin);
+        hubungan1.setText(hubungan);
 
         //
 
@@ -43,6 +46,11 @@ public class MainActivity2 extends AppCompatActivity {
                 pindahUtama(v);
             }
         });
+
+
+        //
+
+
     }
 
     public void pindahUtama(View view){
@@ -51,4 +59,6 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     }
+
+
 }
