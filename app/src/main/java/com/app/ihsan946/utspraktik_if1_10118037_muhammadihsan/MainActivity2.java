@@ -6,6 +6,7 @@ package com.app.ihsan946.utspraktik_if1_10118037_muhammadihsan;
 //Tanggal Pembuatan : 5 Juni 2021
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,8 +43,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         //
 
-        Button ubah;
+        Button ubah,simpan;
         ubah = findViewById(R.id.btn_ubah);
+        simpan = findViewById(R.id.btn_simpan);
         ubah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +53,26 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+        simpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getApplicationContext());
+                dialog.setContentView(R.layout.custom_dialog);
+
+                //
+                Button ok = dialog.findViewById(R.id.button_ok);
+
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        pindahUtama(v);
+                    }
+                });
+
+                dialog.show();
+            }
+        });
 
         //
 
