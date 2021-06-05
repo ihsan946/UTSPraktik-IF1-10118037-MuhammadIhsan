@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,14 +17,11 @@
         android:fontFamily="@font/roboto"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginLeft="16dp"
         android:textColor="@color/black"
         />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/border_layout1"
         >
@@ -44,8 +43,7 @@
             android:id="@+id/text2_layout1"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="16dp"
-
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:text="Form berikut ini bertujuan untuk memberikan informasi"
             />
         <TextView
@@ -53,14 +51,266 @@
             android:layout_height="wrap_content"
             android:text="kepada pusat agar dapat mudah dilaporkan"
             android:layout_below="@id/text2_layout1"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginBottom="16dp"
             />
-
-
     </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIK"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_edittext1"
+                android:hint="Isikan NIK Anda"
+                android:layout_marginTop="8dp"
+                android:id="@+id/edittext1"
+                android:padding="10dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layout3"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_layout3"
+                    android:text="Nama"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text1_layout3"
+                    android:text=" • "
+                    android:textSize="14sp"
+                    android:id="@+id/text2_layout3"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text2_layout3"
+                    android:text="Harus Diisi"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edittext2"
+                    android:background="@drawable/border_edittext1"
+                    android:layout_below="@id/text1_layout3"
+                    android:padding="10dp"
+                    android:hint="Isikan Nama Anda"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layout4"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_layout4"
+                    android:text="Tanggal Lahir"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text1_layout4"
+                    android:text=" • "
+                    android:textSize="14sp"
+                    android:id="@+id/text2_layout4"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text2_layout4"
+                    android:text="Harus Diisi"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edittext3"
+                    android:background="@drawable/border_edittext1"
+                    android:layout_below="@id/text1_layout4"
+                    android:padding="10dp"
+                    android:hint="Isikan Tanggal Lahir Anda"
+                    android:drawableRight="@drawable/calender"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layout5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_layout5"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text1_layout5"
+                    android:text=" • "
+                    android:textSize="14sp"
+                    android:id="@+id/text2_layout5"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text2_layout5"
+                    android:text="Harus Diisi"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <RadioGroup
+                    android:layout_below="@id/text1_layout5"
+                    android:layout_width="match_parent"
+                    android:id="@+id/jenis_kelamin"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/laki2"
+                        android:text="Laki - laki"
+                        android:backgroundTint="@color/green"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/perempuan"
+                        android:text="Perempuan"
+                        android:backgroundTint="@color/green"
+                        />
+                </RadioGroup>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layout6"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_layout6"
+                    android:text="Hubungan dengan Anda"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text1_layout6"
+                    android:text=" • "
+                    android:textSize="14sp"
+                    android:id="@+id/text2_layout6"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text2_layout6"
+                    android:text="Harus Diisi"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    />
+                <RadioGroup
+                    android:layout_below="@id/text1_layout6"
+                    android:layout_width="match_parent"
+                    android:id="@+id/hubungan_anda"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/item1"
+                        android:text="Orangtua"
+                        android:backgroundTint="@color/green"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/item2"
+                        android:text="Suami/Istri"
+                        android:backgroundTint="@color/green"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/item3"
+                        android:text="Anak"
+                        android:backgroundTint="@color/green"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/item4"
+                        android:text="Kerabat Lainnya"
+                        android:backgroundTint="@color/green"
+                        />
+                </RadioGroup>
+            </RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_button"
+                android:text="Selanjutnya"
+                android:textAllCaps="false"
+                android:id="@+id/button_selanjutnya"
+                android:textColor="@color/white"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="32dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
