@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Form Pengisian Data"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_layout1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Info"
+            android:id="@+id/text1_layout1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:background="@drawable/border_info1"
+            android:layout_marginTop="-25dp"
+            android:layout_marginLeft="-20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2_layout1"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="16dp"
+
+            android:textSize="12sp"
+            android:text="Form berikut ini bertujuan untuk memberikan informasi"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kepada pusat agar dapat mudah dilaporkan"
+            android:layout_below="@id/text2_layout1"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
